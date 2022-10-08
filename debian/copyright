@@ -1,0 +1,37 @@
+This is the Debian package for GtkLP, and it is built from sources
+obtained from http://gtklp.sourceforge.net/
+
+This package was debianized by Matthias Kabel <mkabel@debian.org> on
+Sun, 12 Nov 2000 18:04:06 +0100.
+
+Zak B. Elep <zakame@spunge.org> took over the maintenance of this
+package on Sun, 25 Apr 2004 13:30:01 +0800.
+
+Ondřej Surý <ondrej@debian.org> converted the package to dh and
+updated it to last upstream version.
+
+Upstream Author: Tobias Mueller <sirtobi@stud.uni-hannover.de>
+
+Copyright: Copyright (C) 1998-2004 Tobias Mueller
+
+License:
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; either version 2
+ of the License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA
+
+On Debian systems, the complete text of the GNU General Public License,
+version 2, can be found in the file `/usr/share/common-licenses/GPL-2'.
+
+Zak B. Elep <zakame@spunge.org>

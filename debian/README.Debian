@@ -1,0 +1,16 @@
+gtklp for Debian
+----------------------
+
+This release now uses GTK2.
+
+gtklp-1.0rel+1.0f-2 now has "/usr/bin/gtklpq" as the default "GtkLPQ
+Command", so calls to GtkLPQ from GtkLP should now work correctly.
+Also, `sensible-browser' (from debianutils) is used as the default
+browser command instead of `netscape'.
+
+For those upgrading from older releases (0.9n), you should change the
+"GtkLPQ Command" textbox under the GtkLP tab in gtklp from "1" to
+"/usr/bin/gtklpq".
+
+ -- Zak B. Elep <zakame@spunge.org>, Sat Aug 27 09:04:08 2005
+

@@ -1,0 +1,5 @@
+# Watch control file for package gtklp, used by uscan
+# $Id: watch,v 1.2 2006-06-03 12:16:34 zakame Exp $
+version=3
+http://sf.net/gtklp/gtklp-(.+)\.src\.tar\.gz	debian	uupdate
+

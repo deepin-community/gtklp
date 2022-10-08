@@ -1,0 +1,27 @@
+Source: gtklp
+Section: x11
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               libcups2-dev,
+               libglib2.0-dev,
+               libgtk2.0-dev
+Build-Conflicts: autoconf2.13,
+                 automake1.4
+Standards-Version: 4.5.0
+Homepage: http://gtklp.sirtobi.com/
+
+Package: gtklp
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: sensible-utils
+Description: printing tool for CUPS on the GNOME Desktop
+ GtkLP lets you print files under the Common Unix Printing System
+ (CUPS).  Written in GTK+ 2.0 and for the GNOME desktop environment,
+ it supports multiple option settings for each printer it knows,
+ with all the standard CUPS options available.
+ .
+ Other features include localized dialogs for several languages, as
+ well as multiple interfaces; with a little more effort, you can use
+ GtkLP as a drop-in replacement for `lp'.

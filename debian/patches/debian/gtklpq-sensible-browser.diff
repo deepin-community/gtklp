@@ -1,0 +1,39 @@
+From: Zak B. Elep <zakame@zakame.net>
+Subject: [PATCH] Use gtklpq and sensible-browser for defaults
+
+Let GtkLP be able to invoke GtkLPQ and sensible-browser for its
+components.
+
+Signed-off-by: Zak B. Elep <zakame@zakame.net>
+
+---
+ gtklp/gtklp_functions.c |    4 +++-
+ include/defaults.h      |    3 ++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+--- gtklp.orig/gtklp/gtklp_functions.c
++++ gtklp/gtklp/gtklp_functions.c
+@@ -720,8 +720,10 @@ void getOptions(char *printername,int wh
+ 		jobidonexit=0;
+ 		strncpy(BROWSER,DEF_BROWSER_CMD,(size_t)MAXPATH);
+ 		strncpy(HELPURL,DEF_HELP_HOME,(size_t)MAXPATH);
+-		GTKLPQCOM[0]=(uintptr_t)NULL;
++		strncpy(GTKLPQCOM,DEF_GTKLPQ_CMD,(size_t)MAXPATH);
+ 		wantconst=0;
++
++
+ #if GTK_MAJOR_VERSION != 1
+ 		mainWindowHeight=0; 
+ 		mainWindowWidth=0;
+--- gtklp.orig/include/defaults.h
++++ gtklp/include/defaults.h
+@@ -66,7 +66,8 @@
+ /* PATHS */
+ #define DEF_GTKLPRC "/etc/gtklp"
+ #define DEF_HELP_HOME "http://localhost:631/sum.html#STANDARD_OPTIONS"
+-#define DEF_BROWSER_CMD "netscape $0 2>/dev/null&"
++#define DEF_BROWSER_CMD "sensible-browser $0 2>/dev/null&"
++#define DEF_GTKLPQ_CMD "gtklpq"
+ 
+ #define GTKLPRC_USER ".gtklp"
+ #define GTKLPRC_GLOBAL "gtklprc"

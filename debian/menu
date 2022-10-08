@@ -1,0 +1,4 @@
+?package(gtklp):needs="X11" section="Applications/System/Administration"\
+  title="gtklp" command="/usr/bin/gtklp"
+?package(gtklp):needs="X11" section="Applications/System/Administration"\
+  title="gtklpq" command="/usr/bin/gtklpq"

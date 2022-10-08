@@ -1,0 +1,31 @@
+From: Zak B. Elep <zakame@zakame.net>
+Subject: [PATCH] autogen.sh: fix for non-interactive builds
+
+Update autogen.sh so it can be called non-interactively (e.g.  use
+autopoint instead of gettextize.)
+
+Signed-off-by: Zak B. Elep <zakame@zakame.net>
+
+---
+ autogen.sh |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index 3432ac0..92f9f81 100644
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -5,10 +5,10 @@ LC_ALL=C
+ #LC_ALL=UTF-8
+ export LANG LC_ALL
+ 
++echo Running autopoint...
++autopoint --force
+ echo Running libtoolize...
+ libtoolize --copy --force
+-echo Running gettextize...
+-gettextize --copy -f --intl
+ echo Running aclocal...
+ aclocal -I m4 
+ echo Running autoheader...
+-- 
+tg: (f201f96..) fixes/autogen-sh (depends on: upstream)

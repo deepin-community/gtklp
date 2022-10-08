@@ -1,0 +1,6 @@
+fix_FTBFS_binutils-gold.patch
+bugs/422266.diff
+debian/gtklpq-sensible-browser.diff
+bugs/639032.diff
+bugs/644113.diff
+fix_gcc-10.patch

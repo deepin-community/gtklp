@@ -1,0 +1,17 @@
+Description: Include <cups/ppd.h> for ppd_file_t
+Author: Colin Watson <cjwatson@ubuntu.com>
+Bug-Debian: http://bugs.debian.org/639032
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/831283
+Forwarded: no
+Last-Update: 2011-09-14
+
+--- gtklp.orig/gtklp/gtklp.h
++++ gtklp/gtklp/gtklp.h
+@@ -28,6 +28,7 @@
+ #include <cups/cups.h>
+ #include <cups/ppd.h>
+ #include <cups/http.h>
++#include <cups/ppd.h>
+ 
+ #include <defaults.h>
+ 

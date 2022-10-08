@@ -1,0 +1,33 @@
+Building gtklp for Debian
+-------------------------
+
+The gtklp source package uses quilt to apply and remove its
+patches. Please refer to /usr/share/doc/quilt/README.source for
+information about how to use quilt for source packages.
+
+The quilt series is generated from the Git repository, using TopGit
+itself.  This process is documented in
+/usr/share/doc/topgit/HOWTO-tg2quilt.gz .
+
+The gtklp packages uses a branch layout similar to that described for
+topgit(1) and git-buildpackage(1):
+
+  bugs/*: fixes for Debian bugs, usually based upstream, but when a bugs
+          branch is based on the debian branch, it is not tracked by
+          topgit
+
+  fixes/*: miscellaneous fixes, based upstream
+
+  pristine-tar: delta files for pristine-tar(1)
+
+  debian/*: Debian-specific changes not for upstrean, e.g., custom
+            links using Debian tools
+
+Package building is still done on the master branch:
+
+  $ git checkout master
+  $ debian/rules tg-cleanexport
+  $ git buildpackage --git-ignore-new
+  $ git clean -df && git checkout -f
+
+ -- Zak B. Elep <zakame@zakame.net>, Fri, 28 Aug 2009 10:09:13 +0800

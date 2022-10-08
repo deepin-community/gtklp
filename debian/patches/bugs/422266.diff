@@ -1,0 +1,24 @@
+From: Zak B. Elep <zakame@zakame.net>
+Subject: [PATCH] include/defaults.h: increase printer name maximum length
+
+Bump DEF_PRN_LEN to a bigger size than 50 characters.
+
+Debian Bug #422266
+
+Signed-off-by: Zak B. Elep <zakame@zakame.net>
+
+---
+ include/defaults.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+--- gtklp.orig/include/defaults.h
++++ gtklp/include/defaults.h
+@@ -72,7 +72,7 @@
+ #define GTKLPRC_GLOBAL "gtklprc"
+ 
+ /* Constants */
+-#define DEF_PRN_LEN 50
++#define DEF_PRN_LEN 256
+ #define MAX_BANNER 20
+ #ifdef PATH_MAX
+ #  define MAXPATH PATH_MAX
